@@ -73,13 +73,10 @@ func main() {
 	fmt.Println("=======================================")
 	fmt.Println("LOAD TEST RESULTS (Worker Pool Pattern)")
 	fmt.Println("=======================================")
-	fmt.Printf("⏱️  Time Taken: %v\n", duration)
-	fmt.Printf("✅  Successful Orders (Got Ticket) : %d\n", successCount)
-	fmt.Printf("❌  Sold Out Rejections            : %d\n", soldOutCount)
-	fmt.Printf("⚠️   Server Errors                  : %d\n", errorCount)
+	fmt.Printf("Time Taken					   : %v\n", duration)
+	fmt.Printf("Successful Orders (Got Ticket) : %d\n", successCount)
+	fmt.Printf("Sold Out Rejections            : %d\n", soldOutCount)
+	fmt.Printf("Server Errors                  : %d\n", errorCount)
 	fmt.Println("=======================================")
 
-	if successCount == 1000 && soldOutCount == 9000 {
-		fmt.Println("🏆 GOD LEVEL ARCHITECTURE: Zero Race Conditions, Zero Network Drops!")
-	}
 }
