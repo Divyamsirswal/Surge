@@ -1,0 +1,28 @@
+services:
+    db:
+        image: postgres:16-alpine
+        container_name: surge_postgres
+        environment:
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=supersecret
+            - POSTGRES_DB=surge_db
+        ports:
+            - "5432:5432"
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+    cache:
+        image: redis:7-alpine
+        container_name: surge_redis
+        ports:
+            - "6379:6379"
+    message_broker:
+        image: rabbitmq:3-management-alpine
+        container_name: surge_rabbitmq
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        volumes:
+            - mqdata:/var/lib/rabbitmq
+volumes:
+    pgdata:
+    mqdata:
