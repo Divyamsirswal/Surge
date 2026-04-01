@@ -1,5 +1,7 @@
 # Surge: High-Throughput Flash Sale Engine
 
+![Surge Architecture Flow](./image.png)
+
 An enterprise-grade, distributed backend architecture designed to handle massive traffic spikes (like Flash Sales or Ticket Bookings) without database locks, race conditions, or server crashes.
 
 ## The Core Problem Solved
